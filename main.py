@@ -14,6 +14,7 @@ from PySide6.QtGui import QIcon
 from PySide6.QtWidgets import QMainWindow, QApplication
 from modules.ui.ui_main import Ui_MainWindow
 from modules.ui.app_settings import Settings
+from modules.ui.ui_functions import *
 
 # EVRENSEL ARAÇLAR AYARLANIR
 # //////////////////////////////////////////////////////////////////////////////
@@ -42,6 +43,10 @@ class MainWindow(QMainWindow):
         # METİNLERİ EKLE
         self.setWindowTitle(title)
         widgets.titleRightInfo.setText(description)
+
+        # MENU GEÇİŞİ
+        # ///////////////////////////////////////////////////////////////////////
+        widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggle_menu(self, True))
 
 
 if __name__ == "__main__":
