@@ -1,0 +1,5 @@
+# Derlenmiş ön bellek dosyalarının klasörünü gizle
+__pycache__/
+
+# PyCharm IDE klasörünü gizle
+.idea/
