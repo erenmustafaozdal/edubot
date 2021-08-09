@@ -1,0 +1,20 @@
+<RCC>
+  <qresource prefix="images">
+    <file>images/images/robot_hello.png</file>
+    <file>images/images/edubot_kare_logo.png</file>
+    <file>images/images/robot_not_found.png</file>
+  </qresource>
+  <qresource prefix="icons">
+    <file>images/icons/cil-size-grip.png</file>
+    <file>images/icons/dash.svg</file>
+    <file>images/icons/fullscreen.svg</file>
+    <file>images/icons/fullscreen-exit.svg</file>
+    <file>images/icons/file-earmark-person-fill.svg</file>
+    <file>images/icons/gear-fill.svg</file>
+    <file>images/icons/house-door-fill.svg</file>
+    <file>images/icons/list.svg</file>
+    <file>images/icons/people-fill.svg</file>
+    <file>images/icons/person-plus-fill.svg</file>
+    <file>images/icons/x.svg</file>
+  </qresource>
+</RCC>
