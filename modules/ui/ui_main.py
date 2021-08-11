@@ -597,7 +597,7 @@ class Ui_MainWindow(object):
         self.leftMenuBg = QFrame(self.bgApp)
         self.leftMenuBg.setObjectName(u"leftMenuBg")
         self.leftMenuBg.setMinimumSize(QSize(60, 0))
-        self.leftMenuBg.setMaximumSize(QSize(60, 16777215))
+        self.leftMenuBg.setMaximumSize(QSize(240, 16777215))
         self.leftMenuBg.setFrameShape(QFrame.NoFrame)
         self.leftMenuBg.setFrameShadow(QFrame.Raised)
         self.verticalLayout_3 = QVBoxLayout(self.leftMenuBg)
@@ -922,6 +922,7 @@ class Ui_MainWindow(object):
         self.titleRightInfo = QLabel(self.leftBox)
         self.titleRightInfo.setObjectName(u"titleRightInfo")
         self.titleRightInfo.setMaximumSize(QSize(16777215, 45))
+        self.titleRightInfo.setCursor(QCursor(Qt.SizeAllCursor))
 
         self.horizontalLayout_4.addWidget(self.titleRightInfo)
 

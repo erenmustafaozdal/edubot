@@ -1,7 +1,6 @@
 class Settings:
     # UYGULAMA AYARLARI
     # ///////////////////////////////////////////////////////////////
-    ENABLE_CUSTOM_TITLE_BAR = True
     MENU_WIDTH = 240
     LEFT_BOX_WIDTH = 240
     RIGHT_BOX_WIDTH = 240

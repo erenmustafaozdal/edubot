@@ -39,16 +39,16 @@ class UIFunctions(MainWindow):
             # GENİŞLİK ALINIR
             width = self.ui.leftMenuBg.width()
             menu_width = Settings.MENU_WIDTH
-            standart = 60
+            minimize = 60
 
             # MENÜ GENİŞLİĞİ AYARLANIR
             if width == 60:
                 width_extended = menu_width
             else:
-                width_extended = standart
+                width_extended = minimize
 
             # ANİMASYON
-            self.animation = QPropertyAnimation(self.ui.leftMenuBg, b"minimumWidth")
+            self.animation = QPropertyAnimation(self.ui.leftMenuBg, b"maximumWidth")
             self.animation.setDuration(Settings.TIME_ANIMATION)
             self.animation.setStartValue(width)
             self.animation.setEndValue(width_extended)

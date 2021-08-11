@@ -714,7 +714,7 @@ Button */
          </property>
          <property name="maximumSize">
           <size>
-           <width>60</width>
+           <width>240</width>
            <height>16777215</height>
           </size>
          </property>
@@ -1581,6 +1581,9 @@ p, li { white-space: pre-wrap; }
                     <width>16777215</width>
                     <height>45</height>
                    </size>
+                  </property>
+                  <property name="cursor">
+                   <cursorShape>SizeAllCursor</cursorShape>
                   </property>
                   <property name="text">
                    <string>EduBot'a hoş geldiniz!..</string>
