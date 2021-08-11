@@ -55,6 +55,37 @@ class UIFunctions(MainWindow):
             self.animation.setEasingCurve(QEasingCurve.InOutQuart)
             self.animation.start()
 
+    # ÖĞRETMENLER KUTUSU GEÇİŞİ
+    # //////////////////////////////////////////////////////////////////////
+    def toggle_teachers_box(self, enable):
+        if enable:
+            # GENİŞLİĞİ AL
+            width = self.ui.teachersBox.width()
+            max_extend = Settings.TEACHERS_BOX_WIDTH
+            color = Settings.BTN_TEACHERS_BOX_COLOR
+            standard = 0
+
+            # TUŞ STİLİNİ AL
+            style = self.ui.toggleTeachersBox.styleSheet()
+
+            # GENİŞLİĞİ AYARLA
+            if width == 0:
+                width_extended = max_extend
+                # TUŞU SEÇ
+                self.ui.toggleTeachersBox.setStyleSheet(style + color)
+            else:
+                width_extended = standard
+                # TUŞU RESETLE
+                self.ui.toggleTeachersBox.setStyleSheet(style.replace(color, ''))
+
+        # ANIMATION LEFT BOX
+        self.left_box = QPropertyAnimation(self.ui.teachersBox, b"minimumWidth")
+        self.left_box.setDuration(Settings.TIME_ANIMATION)
+        self.left_box.setStartValue(width)
+        self.left_box.setEndValue(width_extended)
+        self.left_box.setEasingCurve(QEasingCurve.InOutQuart)
+        self.left_box.start()
+
     # UI TANIMLAMALARI
     # //////////////////////////////////////////////////////////////////////////////
     def ui_definations(self):
@@ -95,8 +126,42 @@ class UIFunctions(MainWindow):
         self.sizegrip = QSizeGrip(self.ui.frame_size_grip)
         self.sizegrip.setStyleSheet("width: 20px; height: 20px; margin 0px; padding: 0px;")
 
+        # ÖZEL TUŞ İLE SİMGE DURUMUNA KÜÇÜLTME
+        self.ui.minimizeAppBtn.clicked.connect(lambda: self.showMinimized())
+
+        # ÖZEL TUŞ İLE TAM EKRAN BÜYÜT VE GERİ DÖNDÜR
+        self.ui.maximizeRestoreAppBtn.clicked.connect(lambda: UIFunctions.maximize_restore(self))
+
+        # özel tuş ile uygulamayı kapat
+        self.ui.closeAppBtn.clicked.connect(lambda: self.close())
+
     # EVRENSEL DURUMU DÖNDÜRÜR
     # ///////////////////////////////////////////////////////////////
     @staticmethod
     def return_status(self):
         return GLOBAL_STATE
+
+    # MENÜ SEÇ VE SEÇİMİ KALDIR
+    # ///////////////////////////////////////////////////////////////
+
+    # SEÇ
+    def select_menu(getStyle):
+        select = getStyle + Settings.MENU_SELECTED_STYLESHEET
+        return select
+
+    # SEÇİMİ KALDIR
+    def deselect_menu(getStyle):
+        deselect = getStyle.replace(Settings.MENU_SELECTED_STYLESHEET, "")
+        return deselect
+
+    # SEÇİMİ BAŞLAT
+    def select_standard_menu(self, widget):
+        for w in self.ui.topMenu.findChildren(QPushButton):
+            if w.objectName() == widget:
+                w.setStyleSheet(UIFunctions.select_menu(w.styleSheet()))
+
+    # SEÇİMİ RESETLE
+    def reset_style(self, widget):
+        for w in self.ui.topMenu.findChildren(QPushButton):
+            if w.objectName() != widget:
+                w.setStyleSheet(UIFunctions.deselect_menu(w.styleSheet()))

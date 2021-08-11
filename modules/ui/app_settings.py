@@ -2,12 +2,12 @@ class Settings:
     # UYGULAMA AYARLARI
     # ///////////////////////////////////////////////////////////////
     MENU_WIDTH = 240
-    LEFT_BOX_WIDTH = 240
+    TEACHERS_BOX_WIDTH = 240
     RIGHT_BOX_WIDTH = 240
     TIME_ANIMATION = 500
 
     # SOL VE SAĞDAKİ TUŞ KUTU RENKLERİ
-    BTN_LEFT_BOX_COLOR = "background-color: #2C313A;"
+    BTN_TEACHERS_BOX_COLOR = "background-color: #2C313A;"
     BTN_RIGHT_BOX_COLOR = "background-color: #3F72AF;"
 
     # SEÇİLMİŞ MENÜ STİLİ

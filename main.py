@@ -52,6 +52,50 @@ class MainWindow(QMainWindow):
         # //////////////////////////////////////////////////////////////////////
         UIFunctions.ui_definations(self)
 
+        # TUŞLARA TIKLAMA
+        # //////////////////////////////////////////////////////////////////////
+
+        # SOL MENÜ
+        widgets.btn_home.clicked.connect(self.button_click)
+        widgets.btn_students.clicked.connect(self.button_click)
+
+        # ÖĞRETMENLER KUTUSU AÇILMASI VE KAPANMASI
+        def toggle_teachers_box():
+            UIFunctions.toggle_teachers_box(self, True)
+        widgets.toggleTeachersBox.clicked.connect(toggle_teachers_box)
+        widgets.teachersBoxCloseBtn.clicked.connect(toggle_teachers_box)
+
+        # ANA SAYFAYI AYARLA VE STİLLERİ DEĞİŞTİR
+        # //////////////////////////////////////////////////////////////////////
+        widgets.stackedWidget.setCurrentWidget(widgets.home)
+        widgets.btn_home.setStyleSheet(UIFunctions.select_menu(widgets.btn_home.styleSheet()))
+
+        # UYGULAMAYI GÖSTER
+        # //////////////////////////////////////////////////////////////////////
+        self.show()
+
+    # TUŞLARA TIKLAMA
+    # ///////////////////////////////////////////////////////////////
+    def button_click(self):
+        # TIKLANAN TUŞU AL
+        btn = self.sender()
+        btn_name = btn.objectName()
+
+        # ANA SAYFAYI GÖSTER
+        if btn_name == "btn_home":
+            widgets.stackedWidget.setCurrentWidget(widgets.home)
+
+        # ÖĞRENCİLERİ GÖSTER
+        if btn_name == "btn_students":
+            widgets.stackedWidget.setCurrentWidget(widgets.students)
+
+        # TUŞ STİLLERİNİ DEĞİŞTİR
+        UIFunctions.reset_style(self, btn_name)
+        btn.setStyleSheet(UIFunctions.select_menu(btn.styleSheet()))
+
+        # TUŞ ADINI YAZDIR
+        print(f'"{btn_name}" tuşu basıldı!')
+
     # MOUSE TIKLAMA OLAYLARI
     # ///////////////////////////////////////////////////////////////
     def mousePressEvent(self, event):
@@ -69,5 +113,4 @@ if __name__ == "__main__":
     edubot = QApplication(sys.argv)
     edubot.setWindowIcon(QIcon("icon.ico"))
     window = MainWindow()
-    window.show()
     sys.exit(edubot.exec())

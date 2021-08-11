@@ -172,7 +172,7 @@ class Ui_MainWindow(object):
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
 "Extra Tab */\n"
-"#extraLeftBox { \n"
+"#teachersBox { \n"
 "    background-color: #2C313A;\n"
 "}\n"
 "#extraTopBg{    \n"
@@ -190,10 +190,10 @@ class Ui_MainWindow(object):
 "#extraLabel { color: #FFFFFF; }\n"
 "\n"
 "/* Btn Close */\n"
-"#extraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
-"#extraCloseColumnBtn:hover { background-color: #6F99CB; border-style: solid; border-radius: 4px; } /* A\u00e7\u0131k Mavi */\n"
-"#extraCloseColumnBtn:pressed "
-                        "{ background-color: #38669D; border-style: solid; border-radius: 4px; } /* Mavi (Bir t\u0131k koyu) */\n"
+"#teachersBoxCloseBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }\n"
+"#teachersBoxCloseBtn:hover { background-color: #6F99CB; border-style: solid; border-radius: 4px; } /* A\u00e7\u0131k Mavi */\n"
+"#teachersBoxCloseBtn:pressed {"
+                        " background-color: #38669D; border-style: solid; border-radius: 4px; } /* Mavi (Bir t\u0131k koyu) */\n"
 "\n"
 "/* Extra Content */\n"
 "#extraContent{\n"
@@ -701,15 +701,15 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.setSpacing(0)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.toggleLeftBox = QPushButton(self.bottomMenu)
-        self.toggleLeftBox.setObjectName(u"toggleLeftBox")
-        sizePolicy.setHeightForWidth(self.toggleLeftBox.sizePolicy().hasHeightForWidth())
-        self.toggleLeftBox.setSizePolicy(sizePolicy)
-        self.toggleLeftBox.setMinimumSize(QSize(0, 45))
-        self.toggleLeftBox.setCursor(QCursor(Qt.PointingHandCursor))
-        self.toggleLeftBox.setStyleSheet(u"background-image: url(:/icons/images/icons/people-fill.svg);")
+        self.toggleTeachersBox = QPushButton(self.bottomMenu)
+        self.toggleTeachersBox.setObjectName(u"toggleTeachersBox")
+        sizePolicy.setHeightForWidth(self.toggleTeachersBox.sizePolicy().hasHeightForWidth())
+        self.toggleTeachersBox.setSizePolicy(sizePolicy)
+        self.toggleTeachersBox.setMinimumSize(QSize(0, 45))
+        self.toggleTeachersBox.setCursor(QCursor(Qt.PointingHandCursor))
+        self.toggleTeachersBox.setStyleSheet(u"background-image: url(:/icons/images/icons/people-fill.svg);")
 
-        self.verticalLayout_9.addWidget(self.toggleLeftBox)
+        self.verticalLayout_9.addWidget(self.toggleTeachersBox)
 
 
         self.verticalMenuLayout.addWidget(self.bottomMenu, 0, Qt.AlignBottom)
@@ -720,16 +720,16 @@ class Ui_MainWindow(object):
 
         self.appLayout.addWidget(self.leftMenuBg)
 
-        self.extraLeftBox = QFrame(self.bgApp)
-        self.extraLeftBox.setObjectName(u"extraLeftBox")
-        self.extraLeftBox.setMaximumSize(QSize(0, 16777215))
-        self.extraLeftBox.setFrameShape(QFrame.NoFrame)
-        self.extraLeftBox.setFrameShadow(QFrame.Raised)
-        self.extraColumLayout = QVBoxLayout(self.extraLeftBox)
+        self.teachersBox = QFrame(self.bgApp)
+        self.teachersBox.setObjectName(u"teachersBox")
+        self.teachersBox.setMaximumSize(QSize(0, 16777215))
+        self.teachersBox.setFrameShape(QFrame.NoFrame)
+        self.teachersBox.setFrameShadow(QFrame.Raised)
+        self.extraColumLayout = QVBoxLayout(self.teachersBox)
         self.extraColumLayout.setSpacing(0)
         self.extraColumLayout.setObjectName(u"extraColumLayout")
         self.extraColumLayout.setContentsMargins(0, 0, 0, 0)
-        self.extraTopBg = QFrame(self.extraLeftBox)
+        self.extraTopBg = QFrame(self.teachersBox)
         self.extraTopBg.setObjectName(u"extraTopBg")
         self.extraTopBg.setMinimumSize(QSize(0, 50))
         self.extraTopBg.setMaximumSize(QSize(16777215, 50))
@@ -744,17 +744,17 @@ class Ui_MainWindow(object):
         self.extraTopLayout.setHorizontalSpacing(10)
         self.extraTopLayout.setVerticalSpacing(0)
         self.extraTopLayout.setContentsMargins(10, -1, 10, -1)
-        self.extraCloseColumnBtn = QPushButton(self.extraTopBg)
-        self.extraCloseColumnBtn.setObjectName(u"extraCloseColumnBtn")
-        self.extraCloseColumnBtn.setMinimumSize(QSize(28, 28))
-        self.extraCloseColumnBtn.setMaximumSize(QSize(28, 28))
-        self.extraCloseColumnBtn.setCursor(QCursor(Qt.PointingHandCursor))
+        self.teachersBoxCloseBtn = QPushButton(self.extraTopBg)
+        self.teachersBoxCloseBtn.setObjectName(u"teachersBoxCloseBtn")
+        self.teachersBoxCloseBtn.setMinimumSize(QSize(28, 28))
+        self.teachersBoxCloseBtn.setMaximumSize(QSize(28, 28))
+        self.teachersBoxCloseBtn.setCursor(QCursor(Qt.PointingHandCursor))
         icon = QIcon()
         icon.addFile(u":/icons/images/icons/x.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.extraCloseColumnBtn.setIcon(icon)
-        self.extraCloseColumnBtn.setIconSize(QSize(25, 25))
+        self.teachersBoxCloseBtn.setIcon(icon)
+        self.teachersBoxCloseBtn.setIconSize(QSize(25, 25))
 
-        self.extraTopLayout.addWidget(self.extraCloseColumnBtn, 0, 2, 1, 1)
+        self.extraTopLayout.addWidget(self.teachersBoxCloseBtn, 0, 2, 1, 1)
 
         self.extraLabel = QLabel(self.extraTopBg)
         self.extraLabel.setObjectName(u"extraLabel")
@@ -777,7 +777,7 @@ class Ui_MainWindow(object):
 
         self.extraColumLayout.addWidget(self.extraTopBg)
 
-        self.extraContent = QFrame(self.extraLeftBox)
+        self.extraContent = QFrame(self.teachersBox)
         self.extraContent.setObjectName(u"extraContent")
         self.extraContent.setFrameShape(QFrame.NoFrame)
         self.extraContent.setFrameShadow(QFrame.Raised)
@@ -850,7 +850,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_11.addWidget(self.teacher1, 0, Qt.AlignTop)
 
 
-        self.verticalLayout_12.addWidget(self.extraTopMenu, 0, Qt.AlignTop)
+        self.verticalLayout_12.addWidget(self.extraTopMenu)
 
         self.extraCenter = QFrame(self.extraContent)
         self.extraCenter.setObjectName(u"extraCenter")
@@ -886,7 +886,7 @@ class Ui_MainWindow(object):
         self.extraColumLayout.addWidget(self.extraContent)
 
 
-        self.appLayout.addWidget(self.extraLeftBox)
+        self.appLayout.addWidget(self.teachersBox)
 
         self.contentBox = QFrame(self.bgApp)
         self.contentBox.setObjectName(u"contentBox")
@@ -1028,9 +1028,9 @@ class Ui_MainWindow(object):
 "background-position: center;\n"
 "background-repeat: no-repeat;")
         self.stackedWidget.addWidget(self.home)
-        self.page_2 = QWidget()
-        self.page_2.setObjectName(u"page_2")
-        self.stackedWidget.addWidget(self.page_2)
+        self.students = QWidget()
+        self.students.setObjectName(u"students")
+        self.stackedWidget.addWidget(self.students)
 
         self.verticalLayout_15.addWidget(self.stackedWidget)
 
@@ -1087,7 +1087,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1101,13 +1101,13 @@ class Ui_MainWindow(object):
         self.btn_home.setText(QCoreApplication.translate("MainWindow", u"Ana Sayfa", None))
         self.btn_students.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011frenciler", None))
 #if QT_CONFIG(tooltip)
-        self.toggleLeftBox.setToolTip("")
+        self.toggleTeachersBox.setToolTip("")
 #endif // QT_CONFIG(tooltip)
-        self.toggleLeftBox.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmenler", None))
+        self.toggleTeachersBox.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmenler", None))
 #if QT_CONFIG(tooltip)
-        self.extraCloseColumnBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmenler kutusunu kapat", None))
+        self.teachersBoxCloseBtn.setToolTip(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmenler kutusunu kapat", None))
 #endif // QT_CONFIG(tooltip)
-        self.extraCloseColumnBtn.setText("")
+        self.teachersBoxCloseBtn.setText("")
         self.extraLabel.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmenler", None))
         self.teacherName2.setText(QCoreApplication.translate("MainWindow", u"Eren Mustafa \u00d6zdal", None))
 #if QT_CONFIG(tooltip)

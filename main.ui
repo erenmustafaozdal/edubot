@@ -264,7 +264,7 @@ Left Menu */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 Extra Tab */
-#extraLeftBox { 
+#teachersBox { 
     background-color: #2C313A;
 }
 #extraTopBg{    
@@ -282,9 +282,9 @@ Extra Tab */
 #extraLabel { color: #FFFFFF; }
 
 /* Btn Close */
-#extraCloseColumnBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }
-#extraCloseColumnBtn:hover { background-color: #6F99CB; border-style: solid; border-radius: 4px; } /* Açık Mavi */
-#extraCloseColumnBtn:pressed { background-color: #38669D; border-style: solid; border-radius: 4px; } /* Mavi (Bir tık koyu) */
+#teachersBoxCloseBtn { background-color: rgba(255, 255, 255, 0); border: none;  border-radius: 5px; }
+#teachersBoxCloseBtn:hover { background-color: #6F99CB; border-style: solid; border-radius: 4px; } /* Açık Mavi */
+#teachersBoxCloseBtn:pressed { background-color: #38669D; border-style: solid; border-radius: 4px; } /* Mavi (Bir tık koyu) */
 
 /* Extra Content */
 #extraContent{
@@ -1015,7 +1015,7 @@ Button */
                  <number>0</number>
                 </property>
                 <item>
-                 <widget class="QPushButton" name="toggleLeftBox">
+                 <widget class="QPushButton" name="toggleTeachersBox">
                   <property name="sizePolicy">
                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                     <horstretch>0</horstretch>
@@ -1052,7 +1052,7 @@ Button */
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="extraLeftBox">
+        <widget class="QFrame" name="teachersBox">
          <property name="maximumSize">
           <size>
            <width>0</width>
@@ -1132,7 +1132,7 @@ Button */
                 <number>0</number>
                </property>
                <item row="0" column="2">
-                <widget class="QPushButton" name="extraCloseColumnBtn">
+                <widget class="QPushButton" name="teachersBoxCloseBtn">
                  <property name="minimumSize">
                   <size>
                    <width>28</width>
@@ -1230,7 +1230,7 @@ Button */
              <property name="bottomMargin">
               <number>0</number>
              </property>
-             <item alignment="Qt::AlignTop">
+             <item>
               <widget class="QFrame" name="extraTopMenu">
                <property name="frameShape">
                 <enum>QFrame::NoFrame</enum>
@@ -1847,7 +1847,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="sizePolicy">
@@ -1862,7 +1862,7 @@ background-position: center;
 background-repeat: no-repeat;</string>
                       </property>
                      </widget>
-                     <widget class="QWidget" name="page_2"/>
+                     <widget class="QWidget" name="students"/>
                     </widget>
                    </item>
                   </layout>
