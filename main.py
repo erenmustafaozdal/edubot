@@ -10,8 +10,8 @@ import sys
 
 # ARAYÜZÜ, MODÜLLERİ VE ARAÇLARI İÇERİ AKTAR
 # //////////////////////////////////////////////////////////////////////////////
-from PySide6.QtGui import QIcon
-from PySide6.QtWidgets import QMainWindow, QApplication
+from PySide6.QtGui import *
+from PySide6.QtWidgets import *
 from modules.ui.ui_main import Ui_MainWindow
 from modules.ui.app_settings import Settings
 from modules.ui.ui_functions import *
@@ -47,6 +47,10 @@ class MainWindow(QMainWindow):
         # MENU GEÇİŞİ
         # ///////////////////////////////////////////////////////////////////////
         widgets.toggleButton.clicked.connect(lambda: UIFunctions.toggle_menu(self, True))
+
+        # UI TANIMLAMALARINI AYARLA
+        # //////////////////////////////////////////////////////////////////////
+        UIFunctions.ui_definations(self)
 
 
 if __name__ == "__main__":
