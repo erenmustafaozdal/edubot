@@ -52,6 +52,18 @@ class MainWindow(QMainWindow):
         # //////////////////////////////////////////////////////////////////////
         UIFunctions.ui_definations(self)
 
+    # MOUSE TIKLAMA OLAYLARI
+    # ///////////////////////////////////////////////////////////////
+    def mousePressEvent(self, event):
+        # PENCERENİN  SÜRÜKLENME POZİSYONUNU AYARLA
+        self.dragPos = event.globalPosition().toPoint()
+
+        # MOUSE OLAYINI YAZDIR
+        if event.buttons() == Qt.LeftButton:
+            print('Mouse click: LEFT CLICK')
+        if event.buttons() == Qt.RightButton:
+            print('Mouse click: RIGHT CLICK')
+
 
 if __name__ == "__main__":
     edubot = QApplication(sys.argv)
