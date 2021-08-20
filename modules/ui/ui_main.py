@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1155, 700)
+        MainWindow.resize(1149, 720)
         MainWindow.setMinimumSize(QSize(940, 560))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
@@ -580,8 +580,55 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
-"Button */\n"
-"")
+"QGroupBox */\n"
+"QGroupBox {\n"
+"    border: 1px solid #5B657C;\n"
+"    border-radius: 9px;\n"
+"    m"
+                        "argin-top: 10px;\n"
+"    margin-bottom: 20px;\n"
+"	font-size: 13px;\n"
+"    font-weight: bold;\n"
+"	background-color: #21252b;\n"
+"	color: #F96A76;\n"
+"}\n"
+"\n"
+"QGroupBox::title {\n"
+"    subcontrol-origin: margin;\n"
+"    left: 10px;\n"
+"    padding: 0 3px 0 3px;\n"
+"}\n"
+"\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
+"Pages */\n"
+"\n"
+"/* Line */\n"
+"Line {\n"
+"	color: #5B657C;\n"
+"}\n"
+"\n"
+"/* Page Title */\n"
+"QLabel[class=\"page_title\"] {\n"
+"	margin: 0 0 15px 0;\n"
+"}\n"
+"\n"
+"/* Page Description */\n"
+"QLabel[class=\"page_description\"] {\n"
+"	margin: 0 0 5px 0;\n"
+"}\n"
+"\n"
+"/* Form Description */\n"
+"QLabel[class=\"form_description\"] {\n"
+"	margin: 0 0 5px 0;\n"
+"	color: #717E95;\n"
+"}\n"
+"\n"
+"/* Field Description */\n"
+"QLabel[class=\"field_description\"] {\n"
+"	margin: 0 0 5px 0;\n"
+"	color: #717E95;\n"
+"	font-size: 11px;\n"
+"}")
         self.appMargins = QVBoxLayout(self.styleSheet)
         self.appMargins.setSpacing(0)
         self.appMargins.setObjectName(u"appMargins")
@@ -1028,6 +1075,220 @@ class Ui_MainWindow(object):
 "background-position: center;\n"
 "background-repeat: no-repeat;")
         self.stackedWidget.addWidget(self.home)
+        self.teacher = QWidget()
+        self.teacher.setObjectName(u"teacher")
+        self.verticalLayout = QVBoxLayout(self.teacher)
+        self.verticalLayout.setSpacing(0)
+        self.verticalLayout.setObjectName(u"verticalLayout")
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.scrollArea = QScrollArea(self.teacher)
+        self.scrollArea.setObjectName(u"scrollArea")
+        self.scrollArea.setFrameShape(QFrame.NoFrame)
+        self.scrollArea.setFrameShadow(QFrame.Raised)
+        self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.scrollArea.setWidgetResizable(True)
+        self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.scrollAreaWidgetContents = QWidget()
+        self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 859, 641))
+        self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents)
+        self.verticalLayout_7.setSpacing(0)
+        self.verticalLayout_7.setObjectName(u"verticalLayout_7")
+        self.verticalLayout_7.setContentsMargins(10, 0, 15, 0)
+        self.frame = QFrame(self.scrollAreaWidgetContents)
+        self.frame.setObjectName(u"frame")
+        self.frame.setFrameShape(QFrame.StyledPanel)
+        self.frame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_13 = QVBoxLayout(self.frame)
+        self.verticalLayout_13.setSpacing(0)
+        self.verticalLayout_13.setObjectName(u"verticalLayout_13")
+        self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
+        self.teacher_title = QLabel(self.frame)
+        self.teacher_title.setObjectName(u"teacher_title")
+        sizePolicy3 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy3.setHorizontalStretch(0)
+        sizePolicy3.setVerticalStretch(0)
+        sizePolicy3.setHeightForWidth(self.teacher_title.sizePolicy().hasHeightForWidth())
+        self.teacher_title.setSizePolicy(sizePolicy3)
+        self.teacher_title.setTextFormat(Qt.RichText)
+
+        self.verticalLayout_13.addWidget(self.teacher_title)
+
+        self.teacher_description = QLabel(self.frame)
+        self.teacher_description.setObjectName(u"teacher_description")
+        sizePolicy3.setHeightForWidth(self.teacher_description.sizePolicy().hasHeightForWidth())
+        self.teacher_description.setSizePolicy(sizePolicy3)
+        self.teacher_description.setWordWrap(True)
+
+        self.verticalLayout_13.addWidget(self.teacher_description)
+
+        self.teacherPersonalInfo = QGroupBox(self.frame)
+        self.teacherPersonalInfo.setObjectName(u"teacherPersonalInfo")
+        sizePolicy4 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Fixed)
+        sizePolicy4.setHorizontalStretch(0)
+        sizePolicy4.setVerticalStretch(0)
+        sizePolicy4.setHeightForWidth(self.teacherPersonalInfo.sizePolicy().hasHeightForWidth())
+        self.teacherPersonalInfo.setSizePolicy(sizePolicy4)
+        self.teacherPersonalInfo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.teacherPersonalInfo.setFlat(False)
+        self.teacherPersonalInfo.setCheckable(False)
+        self.teacherPersonalInfo.setChecked(False)
+        self._2 = QVBoxLayout(self.teacherPersonalInfo)
+        self._2.setObjectName(u"_2")
+        self._2.setContentsMargins(-1, 15, -1, -1)
+        self.label = QLabel(self.teacherPersonalInfo)
+        self.label.setObjectName(u"label")
+        self.label.setWordWrap(True)
+
+        self._2.addWidget(self.label)
+
+        self.line = QFrame(self.teacherPersonalInfo)
+        self.line.setObjectName(u"line")
+        self.line.setFrameShadow(QFrame.Plain)
+        self.line.setFrameShape(QFrame.HLine)
+
+        self._2.addWidget(self.line)
+
+        self.personalInfoFormLayout = QFormLayout()
+        self.personalInfoFormLayout.setObjectName(u"personalInfoFormLayout")
+        self.personalInfoFormLayout.setLabelAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.lbl_name = QLabel(self.teacherPersonalInfo)
+        self.lbl_name.setObjectName(u"lbl_name")
+
+        self.personalInfoFormLayout.setWidget(0, QFormLayout.LabelRole, self.lbl_name)
+
+        self.ledit_name = QLineEdit(self.teacherPersonalInfo)
+        self.ledit_name.setObjectName(u"ledit_name")
+
+        self.personalInfoFormLayout.setWidget(0, QFormLayout.FieldRole, self.ledit_name)
+
+        self.lbl_surname = QLabel(self.teacherPersonalInfo)
+        self.lbl_surname.setObjectName(u"lbl_surname")
+
+        self.personalInfoFormLayout.setWidget(1, QFormLayout.LabelRole, self.lbl_surname)
+
+        self.ledit_surname = QLineEdit(self.teacherPersonalInfo)
+        self.ledit_surname.setObjectName(u"ledit_surname")
+
+        self.personalInfoFormLayout.setWidget(1, QFormLayout.FieldRole, self.ledit_surname)
+
+
+        self._2.addLayout(self.personalInfoFormLayout)
+
+
+        self.verticalLayout_13.addWidget(self.teacherPersonalInfo)
+
+        self.teacherLoginInfo = QGroupBox(self.frame)
+        self.teacherLoginInfo.setObjectName(u"teacherLoginInfo")
+        sizePolicy4.setHeightForWidth(self.teacherLoginInfo.sizePolicy().hasHeightForWidth())
+        self.teacherLoginInfo.setSizePolicy(sizePolicy4)
+        self.teacherLoginInfo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.teacherLoginInfo.setFlat(False)
+        self.teacherLoginInfo.setCheckable(False)
+        self.teacherLoginInfo.setChecked(False)
+        self._3 = QVBoxLayout(self.teacherLoginInfo)
+        self._3.setObjectName(u"_3")
+        self._3.setContentsMargins(-1, 15, -1, -1)
+        self.label_2 = QLabel(self.teacherLoginInfo)
+        self.label_2.setObjectName(u"label_2")
+        sizePolicy2.setHeightForWidth(self.label_2.sizePolicy().hasHeightForWidth())
+        self.label_2.setSizePolicy(sizePolicy2)
+        self.label_2.setLineWidth(1)
+        self.label_2.setWordWrap(True)
+
+        self._3.addWidget(self.label_2)
+
+        self.line_2 = QFrame(self.teacherLoginInfo)
+        self.line_2.setObjectName(u"line_2")
+        self.line_2.setFrameShadow(QFrame.Plain)
+        self.line_2.setFrameShape(QFrame.HLine)
+
+        self._3.addWidget(self.line_2)
+
+        self.loginFormLayout = QFormLayout()
+        self.loginFormLayout.setObjectName(u"loginFormLayout")
+        self.loginFormLayout.setLabelAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
+        self.lbl_eokul_login_type = QLabel(self.teacherLoginInfo)
+        self.lbl_eokul_login_type.setObjectName(u"lbl_eokul_login_type")
+
+        self.loginFormLayout.setWidget(1, QFormLayout.LabelRole, self.lbl_eokul_login_type)
+
+        self.rad_eokul_login_mebbis = QRadioButton(self.teacherLoginInfo)
+        self.rad_eokul_login_mebbis.setObjectName(u"rad_eokul_login_mebbis")
+
+        self.loginFormLayout.setWidget(1, QFormLayout.FieldRole, self.rad_eokul_login_mebbis)
+
+        self.rad_eokul_login_edevlet = QRadioButton(self.teacherLoginInfo)
+        self.rad_eokul_login_edevlet.setObjectName(u"rad_eokul_login_edevlet")
+
+        self.loginFormLayout.setWidget(2, QFormLayout.FieldRole, self.rad_eokul_login_edevlet)
+
+        self.label_3 = QLabel(self.teacherLoginInfo)
+        self.label_3.setObjectName(u"label_3")
+        sizePolicy4.setHeightForWidth(self.label_3.sizePolicy().hasHeightForWidth())
+        self.label_3.setSizePolicy(sizePolicy4)
+        self.label_3.setLineWidth(1)
+        self.label_3.setWordWrap(True)
+
+        self.loginFormLayout.setWidget(4, QFormLayout.FieldRole, self.label_3)
+
+        self.lbl_mebbis_username = QLabel(self.teacherLoginInfo)
+        self.lbl_mebbis_username.setObjectName(u"lbl_mebbis_username")
+
+        self.loginFormLayout.setWidget(5, QFormLayout.LabelRole, self.lbl_mebbis_username)
+
+        self.ledit_mebbis_username = QLineEdit(self.teacherLoginInfo)
+        self.ledit_mebbis_username.setObjectName(u"ledit_mebbis_username")
+
+        self.loginFormLayout.setWidget(5, QFormLayout.FieldRole, self.ledit_mebbis_username)
+
+        self.lbl_mebbis_password = QLabel(self.teacherLoginInfo)
+        self.lbl_mebbis_password.setObjectName(u"lbl_mebbis_password")
+
+        self.loginFormLayout.setWidget(6, QFormLayout.LabelRole, self.lbl_mebbis_password)
+
+        self.ledit_mebbis_password = QLineEdit(self.teacherLoginInfo)
+        self.ledit_mebbis_password.setObjectName(u"ledit_mebbis_password")
+        self.ledit_mebbis_password.setEchoMode(QLineEdit.Password)
+
+        self.loginFormLayout.setWidget(6, QFormLayout.FieldRole, self.ledit_mebbis_password)
+
+        self.lbl_edevlet_tc = QLabel(self.teacherLoginInfo)
+        self.lbl_edevlet_tc.setObjectName(u"lbl_edevlet_tc")
+
+        self.loginFormLayout.setWidget(7, QFormLayout.LabelRole, self.lbl_edevlet_tc)
+
+        self.ledit_edevlet_tc = QLineEdit(self.teacherLoginInfo)
+        self.ledit_edevlet_tc.setObjectName(u"ledit_edevlet_tc")
+
+        self.loginFormLayout.setWidget(7, QFormLayout.FieldRole, self.ledit_edevlet_tc)
+
+        self.lbl_edevlet_password = QLabel(self.teacherLoginInfo)
+        self.lbl_edevlet_password.setObjectName(u"lbl_edevlet_password")
+
+        self.loginFormLayout.setWidget(8, QFormLayout.LabelRole, self.lbl_edevlet_password)
+
+        self.ledit_edevlet_password = QLineEdit(self.teacherLoginInfo)
+        self.ledit_edevlet_password.setObjectName(u"ledit_edevlet_password")
+        self.ledit_edevlet_password.setEchoMode(QLineEdit.Password)
+
+        self.loginFormLayout.setWidget(8, QFormLayout.FieldRole, self.ledit_edevlet_password)
+
+
+        self._3.addLayout(self.loginFormLayout)
+
+
+        self.verticalLayout_13.addWidget(self.teacherLoginInfo)
+
+
+        self.verticalLayout_7.addWidget(self.frame, 0, Qt.AlignTop)
+
+        self.scrollArea.setWidget(self.scrollAreaWidgetContents)
+
+        self.verticalLayout.addWidget(self.scrollArea)
+
+        self.stackedWidget.addWidget(self.teacher)
         self.students = QWidget()
         self.students.setObjectName(u"students")
         self.stackedWidget.addWidget(self.students)
@@ -1084,8 +1345,31 @@ class Ui_MainWindow(object):
         self.appMargins.addWidget(self.bgApp)
 
         MainWindow.setCentralWidget(self.styleSheet)
+        QWidget.setTabOrder(self.toggleButton, self.btn_home)
+        QWidget.setTabOrder(self.btn_home, self.btn_students)
+        QWidget.setTabOrder(self.btn_students, self.toggleTeachersBox)
+        QWidget.setTabOrder(self.toggleTeachersBox, self.teachersBoxCloseBtn)
+        QWidget.setTabOrder(self.teachersBoxCloseBtn, self.teacherName2)
+        QWidget.setTabOrder(self.teacherName2, self.teacherSelect2)
+        QWidget.setTabOrder(self.teacherSelect2, self.teacherName1)
+        QWidget.setTabOrder(self.teacherName1, self.teacherSelect1)
+        QWidget.setTabOrder(self.teacherSelect1, self.textEdit)
+        QWidget.setTabOrder(self.textEdit, self.btnAddTeacher)
+        QWidget.setTabOrder(self.btnAddTeacher, self.settingsTopBtn)
+        QWidget.setTabOrder(self.settingsTopBtn, self.minimizeAppBtn)
+        QWidget.setTabOrder(self.minimizeAppBtn, self.maximizeRestoreAppBtn)
+        QWidget.setTabOrder(self.maximizeRestoreAppBtn, self.closeAppBtn)
+        QWidget.setTabOrder(self.closeAppBtn, self.scrollArea)
+        QWidget.setTabOrder(self.scrollArea, self.ledit_name)
+        QWidget.setTabOrder(self.ledit_name, self.ledit_surname)
+        QWidget.setTabOrder(self.ledit_surname, self.rad_eokul_login_mebbis)
+        QWidget.setTabOrder(self.rad_eokul_login_mebbis, self.rad_eokul_login_edevlet)
+        QWidget.setTabOrder(self.rad_eokul_login_edevlet, self.ledit_mebbis_username)
+        QWidget.setTabOrder(self.ledit_mebbis_username, self.ledit_mebbis_password)
 
         self.retranslateUi(MainWindow)
+        self.rad_eokul_login_edevlet.toggled.connect(self.ledit_mebbis_username.setDisabled)
+        self.rad_eokul_login_edevlet.toggled.connect(self.ledit_mebbis_password.setDisabled)
 
         self.stackedWidget.setCurrentIndex(1)
 
@@ -1146,6 +1430,33 @@ class Ui_MainWindow(object):
         self.closeAppBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Kapat", None))
 #endif // QT_CONFIG(tooltip)
         self.closeAppBtn.setText("")
+        self.teacher_title.setText(QCoreApplication.translate("MainWindow", u"<h2>Yeni \u00d6\u011fretmen Ekleyin</h2>", None))
+        self.teacher_title.setProperty("class", QCoreApplication.translate("MainWindow", u"page_title", None))
+        self.teacher_description.setText(QCoreApplication.translate("MainWindow", u"EduBot'u kullanacak \u00f6\u011fretmen ekleyin.", None))
+        self.teacher_description.setProperty("class", QCoreApplication.translate("MainWindow", u"page_description", None))
+        self.teacherPersonalInfo.setTitle(QCoreApplication.translate("MainWindow", u"Ki\u015fisel Bilgiler", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"EduBot \u00fczerinde g\u00f6r\u00fcnecek olan \u00f6\u011fretmen bilgileri. Bu bilgileri sadece EduBot i\u00e7inde \u00f6\u011fretmen se\u00e7imi yapmak i\u00e7in kullanacaks\u0131n\u0131z.", None))
+        self.label.setProperty("class", QCoreApplication.translate("MainWindow", u"form_description", None))
+        self.lbl_name.setText(QCoreApplication.translate("MainWindow", u"Ad", None))
+        self.lbl_surname.setText(QCoreApplication.translate("MainWindow", u"Soyad", None))
+        self.teacherLoginInfo.setTitle(QCoreApplication.translate("MainWindow", u"Oturum A\u00e7ma Bilgileri", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"e-Okul ve EBA'da oturum a\u00e7ma bilgileri. Bu bilgiler bilgisayar\u0131n\u0131zdaki EduBot veritaban\u0131nda saklanacakt\u0131r. Bu bilgiler ile EduBot hesaplar\u0131n\u0131za otomatik giri\u015f yap\u0131p i\u015flem yapabilir. Bu bilgileri vermedi\u011finiz takdirde giri\u015f i\u015flemlerini manuel yapman\u0131z gerekecek.", None))
+        self.label_2.setProperty("class", QCoreApplication.translate("MainWindow", u"form_description", None))
+        self.lbl_eokul_login_type.setText(QCoreApplication.translate("MainWindow", u"e-Okul'a nas\u0131l giri\u015f yap\u0131ls\u0131n?", None))
+        self.rad_eokul_login_mebbis.setText(QCoreApplication.translate("MainWindow", u"Mebbis", None))
+        self.rad_eokul_login_edevlet.setText(QCoreApplication.translate("MainWindow", u"e-Devlet", None))
+        self.label_3.setText(QCoreApplication.translate("MainWindow", u"e-Okul'a giri\u015f yaparken burada se\u00e7ti\u011finiz y\u00f6ntem kullan\u0131lacak.", None))
+        self.label_3.setProperty("class", QCoreApplication.translate("MainWindow", u"field_description", None))
+        self.lbl_mebbis_username.setText(QCoreApplication.translate("MainWindow", u"Mebbis Kullan\u0131c\u0131 Ad\u0131", None))
+        self.ledit_mebbis_username.setInputMask(QCoreApplication.translate("MainWindow", u"99999999999", None))
+        self.ledit_mebbis_username.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Mebbis kullan\u0131c\u0131 ad\u0131 olarak kulland\u0131\u011f\u0131n\u0131z T.C. Kimlik No", None))
+        self.lbl_mebbis_password.setText(QCoreApplication.translate("MainWindow", u"Mebbis \u015eifresi", None))
+        self.ledit_mebbis_password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Mebbis kullan\u0131c\u0131 ad\u0131n\u0131za tan\u0131mlad\u0131\u011f\u0131n\u0131z \u015fifreniz", None))
+        self.lbl_edevlet_tc.setText(QCoreApplication.translate("MainWindow", u"e-Devlet T.C. Kimlik No", None))
+        self.ledit_edevlet_tc.setInputMask(QCoreApplication.translate("MainWindow", u"99999999999", None))
+        self.ledit_edevlet_tc.setPlaceholderText(QCoreApplication.translate("MainWindow", u"11 haneli e-Devlet T.C. Kimlik No", None))
+        self.lbl_edevlet_password.setText(QCoreApplication.translate("MainWindow", u"e-Devlet \u015eifresi", None))
+        self.ledit_edevlet_password.setPlaceholderText(QCoreApplication.translate("MainWindow", u"e-Devlet i\u00e7in tan\u0131mlad\u0131\u011f\u0131n\u0131z \u015fifreniz", None))
         self.creditsLabel.setText(QCoreApplication.translate("MainWindow", u"Eren Mustafa \u00d6zdal taraf\u0131ndan geli\u015ftirilmi\u015ftir.", None))
         self.version.setText(QCoreApplication.translate("MainWindow", u"v1.0.0", None))
     # retranslateUi

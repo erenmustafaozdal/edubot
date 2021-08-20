@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1155</width>
-    <height>700</height>
+    <width>1149</width>
+    <height>720</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -661,8 +661,54 @@ QCommandLinkButton:pressed {
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
-Button */
-</string>
+QGroupBox */
+QGroupBox {
+    border: 1px solid #5B657C;
+    border-radius: 9px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+	font-size: 13px;
+    font-weight: bold;
+	background-color: #21252b;
+	color: #F96A76;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0 3px 0 3px;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+Pages */
+
+/* Line */
+Line {
+	color: #5B657C;
+}
+
+/* Page Title */
+QLabel[class=&quot;page_title&quot;] {
+	margin: 0 0 15px 0;
+}
+
+/* Page Description */
+QLabel[class=&quot;page_description&quot;] {
+	margin: 0 0 5px 0;
+}
+
+/* Form Description */
+QLabel[class=&quot;form_description&quot;] {
+	margin: 0 0 5px 0;
+	color: #717E95;
+}
+
+/* Field Description */
+QLabel[class=&quot;field_description&quot;] {
+	margin: 0 0 5px 0;
+	color: #717E95;
+	font-size: 11px;
+}</string>
    </property>
    <layout class="QVBoxLayout" name="appMargins">
     <property name="spacing">
@@ -1862,6 +1908,399 @@ background-position: center;
 background-repeat: no-repeat;</string>
                       </property>
                      </widget>
+                     <widget class="QWidget" name="teacher">
+                      <layout class="QVBoxLayout" name="verticalLayout">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item>
+                        <widget class="QScrollArea" name="scrollArea">
+                         <property name="frameShape">
+                          <enum>QFrame::NoFrame</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <property name="verticalScrollBarPolicy">
+                          <enum>Qt::ScrollBarAlwaysOn</enum>
+                         </property>
+                         <property name="horizontalScrollBarPolicy">
+                          <enum>Qt::ScrollBarAlwaysOff</enum>
+                         </property>
+                         <property name="widgetResizable">
+                          <bool>true</bool>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                         </property>
+                         <widget class="QWidget" name="scrollAreaWidgetContents">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>0</y>
+                            <width>859</width>
+                            <height>641</height>
+                           </rect>
+                          </property>
+                          <layout class="QVBoxLayout" name="verticalLayout_7">
+                           <property name="spacing">
+                            <number>0</number>
+                           </property>
+                           <property name="leftMargin">
+                            <number>10</number>
+                           </property>
+                           <property name="topMargin">
+                            <number>0</number>
+                           </property>
+                           <property name="rightMargin">
+                            <number>15</number>
+                           </property>
+                           <property name="bottomMargin">
+                            <number>0</number>
+                           </property>
+                           <item alignment="Qt::AlignTop">
+                            <widget class="QFrame" name="frame">
+                             <property name="frameShape">
+                              <enum>QFrame::StyledPanel</enum>
+                             </property>
+                             <property name="frameShadow">
+                              <enum>QFrame::Raised</enum>
+                             </property>
+                             <layout class="QVBoxLayout" name="verticalLayout_13">
+                              <property name="spacing">
+                               <number>0</number>
+                              </property>
+                              <property name="leftMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="topMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="rightMargin">
+                               <number>0</number>
+                              </property>
+                              <property name="bottomMargin">
+                               <number>0</number>
+                              </property>
+                              <item>
+                               <widget class="QLabel" name="teacher_title">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string>&lt;h2&gt;Yeni Öğretmen Ekleyin&lt;/h2&gt;</string>
+                                </property>
+                                <property name="textFormat">
+                                 <enum>Qt::RichText</enum>
+                                </property>
+                                <property name="class" stdset="0">
+                                 <string>page_title</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="teacher_description">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="text">
+                                 <string>EduBot'u kullanacak öğretmen ekleyin.</string>
+                                </property>
+                                <property name="wordWrap">
+                                 <bool>true</bool>
+                                </property>
+                                <property name="class" stdset="0">
+                                 <string>page_description</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QGroupBox" name="teacherPersonalInfo">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="title">
+                                 <string>Kişisel Bilgiler</string>
+                                </property>
+                                <property name="alignment">
+                                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                                </property>
+                                <property name="flat">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="checkable">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="checked">
+                                 <bool>false</bool>
+                                </property>
+                                <layout class="QVBoxLayout" name="_2">
+                                 <property name="topMargin">
+                                  <number>15</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label">
+                                   <property name="text">
+                                    <string>EduBot üzerinde görünecek olan öğretmen bilgileri. Bu bilgileri sadece EduBot içinde öğretmen seçimi yapmak için kullanacaksınız.</string>
+                                   </property>
+                                   <property name="wordWrap">
+                                    <bool>true</bool>
+                                   </property>
+                                   <property name="class" stdset="0">
+                                    <string>form_description</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="Line" name="line">
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Plain</enum>
+                                   </property>
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <layout class="QFormLayout" name="personalInfoFormLayout">
+                                   <property name="labelAlignment">
+                                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                                   </property>
+                                   <item row="0" column="0">
+                                    <widget class="QLabel" name="lbl_name">
+                                     <property name="text">
+                                      <string>Ad</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="0" column="1">
+                                    <widget class="QLineEdit" name="ledit_name"/>
+                                   </item>
+                                   <item row="1" column="0">
+                                    <widget class="QLabel" name="lbl_surname">
+                                     <property name="text">
+                                      <string>Soyad</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="1" column="1">
+                                    <widget class="QLineEdit" name="ledit_surname"/>
+                                   </item>
+                                  </layout>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QGroupBox" name="teacherLoginInfo">
+                                <property name="sizePolicy">
+                                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                                 </sizepolicy>
+                                </property>
+                                <property name="title">
+                                 <string>Oturum Açma Bilgileri</string>
+                                </property>
+                                <property name="alignment">
+                                 <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                                </property>
+                                <property name="flat">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="checkable">
+                                 <bool>false</bool>
+                                </property>
+                                <property name="checked">
+                                 <bool>false</bool>
+                                </property>
+                                <layout class="QVBoxLayout" name="_3">
+                                 <property name="topMargin">
+                                  <number>15</number>
+                                 </property>
+                                 <item>
+                                  <widget class="QLabel" name="label_2">
+                                   <property name="sizePolicy">
+                                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                     <horstretch>0</horstretch>
+                                     <verstretch>0</verstretch>
+                                    </sizepolicy>
+                                   </property>
+                                   <property name="lineWidth">
+                                    <number>1</number>
+                                   </property>
+                                   <property name="text">
+                                    <string>e-Okul ve EBA'da oturum açma bilgileri. Bu bilgiler bilgisayarınızdaki EduBot veritabanında saklanacaktır. Bu bilgiler ile EduBot hesaplarınıza otomatik giriş yapıp işlem yapabilir. Bu bilgileri vermediğiniz takdirde giriş işlemlerini manuel yapmanız gerekecek.</string>
+                                   </property>
+                                   <property name="wordWrap">
+                                    <bool>true</bool>
+                                   </property>
+                                   <property name="class" stdset="0">
+                                    <string>form_description</string>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <widget class="Line" name="line_2">
+                                   <property name="frameShadow">
+                                    <enum>QFrame::Plain</enum>
+                                   </property>
+                                   <property name="orientation">
+                                    <enum>Qt::Horizontal</enum>
+                                   </property>
+                                  </widget>
+                                 </item>
+                                 <item>
+                                  <layout class="QFormLayout" name="loginFormLayout">
+                                   <property name="labelAlignment">
+                                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                                   </property>
+                                   <item row="1" column="0">
+                                    <widget class="QLabel" name="lbl_eokul_login_type">
+                                     <property name="text">
+                                      <string>e-Okul'a nasıl giriş yapılsın?</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="1" column="1">
+                                    <widget class="QRadioButton" name="rad_eokul_login_mebbis">
+                                     <property name="text">
+                                      <string>Mebbis</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="2" column="1">
+                                    <widget class="QRadioButton" name="rad_eokul_login_edevlet">
+                                     <property name="text">
+                                      <string>e-Devlet</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="4" column="1">
+                                    <widget class="QLabel" name="label_3">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="lineWidth">
+                                      <number>1</number>
+                                     </property>
+                                     <property name="text">
+                                      <string>e-Okul'a giriş yaparken burada seçtiğiniz yöntem kullanılacak.</string>
+                                     </property>
+                                     <property name="wordWrap">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="class" stdset="0">
+                                      <string>field_description</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="5" column="0">
+                                    <widget class="QLabel" name="lbl_mebbis_username">
+                                     <property name="text">
+                                      <string>Mebbis Kullanıcı Adı</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="5" column="1">
+                                    <widget class="QLineEdit" name="ledit_mebbis_username">
+                                     <property name="inputMask">
+                                      <string>99999999999</string>
+                                     </property>
+                                     <property name="placeholderText">
+                                      <string>Mebbis kullanıcı adı olarak kullandığınız T.C. Kimlik No</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="6" column="0">
+                                    <widget class="QLabel" name="lbl_mebbis_password">
+                                     <property name="text">
+                                      <string>Mebbis Şifresi</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="6" column="1">
+                                    <widget class="QLineEdit" name="ledit_mebbis_password">
+                                     <property name="echoMode">
+                                      <enum>QLineEdit::Password</enum>
+                                     </property>
+                                     <property name="placeholderText">
+                                      <string>Mebbis kullanıcı adınıza tanımladığınız şifreniz</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="7" column="0">
+                                    <widget class="QLabel" name="lbl_edevlet_tc">
+                                     <property name="text">
+                                      <string>e-Devlet T.C. Kimlik No</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="7" column="1">
+                                    <widget class="QLineEdit" name="ledit_edevlet_tc">
+                                     <property name="inputMask">
+                                      <string>99999999999</string>
+                                     </property>
+                                     <property name="placeholderText">
+                                      <string>11 haneli e-Devlet T.C. Kimlik No</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="8" column="0">
+                                    <widget class="QLabel" name="lbl_edevlet_password">
+                                     <property name="text">
+                                      <string>e-Devlet Şifresi</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="8" column="1">
+                                    <widget class="QLineEdit" name="ledit_edevlet_password">
+                                     <property name="echoMode">
+                                      <enum>QLineEdit::Password</enum>
+                                     </property>
+                                     <property name="placeholderText">
+                                      <string>e-Devlet için tanımladığınız şifreniz</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                  </layout>
+                                 </item>
+                                </layout>
+                               </widget>
+                              </item>
+                             </layout>
+                            </widget>
+                           </item>
+                          </layout>
+                         </widget>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
                      <widget class="QWidget" name="students"/>
                     </widget>
                    </item>
@@ -1964,10 +2403,67 @@ background-repeat: no-repeat;</string>
    </layout>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>toggleButton</tabstop>
+  <tabstop>btn_home</tabstop>
+  <tabstop>btn_students</tabstop>
+  <tabstop>toggleTeachersBox</tabstop>
+  <tabstop>teachersBoxCloseBtn</tabstop>
+  <tabstop>teacherName2</tabstop>
+  <tabstop>teacherSelect2</tabstop>
+  <tabstop>teacherName1</tabstop>
+  <tabstop>teacherSelect1</tabstop>
+  <tabstop>textEdit</tabstop>
+  <tabstop>btnAddTeacher</tabstop>
+  <tabstop>settingsTopBtn</tabstop>
+  <tabstop>minimizeAppBtn</tabstop>
+  <tabstop>maximizeRestoreAppBtn</tabstop>
+  <tabstop>closeAppBtn</tabstop>
+  <tabstop>scrollArea</tabstop>
+  <tabstop>ledit_name</tabstop>
+  <tabstop>ledit_surname</tabstop>
+  <tabstop>rad_eokul_login_mebbis</tabstop>
+  <tabstop>rad_eokul_login_edevlet</tabstop>
+  <tabstop>ledit_mebbis_username</tabstop>
+  <tabstop>ledit_mebbis_password</tabstop>
+ </tabstops>
  <resources>
   <include location="resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>rad_eokul_login_edevlet</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ledit_mebbis_username</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>761</x>
+     <y>551</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>761</x>
+     <y>596</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>rad_eokul_login_edevlet</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>ledit_mebbis_password</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>787</x>
+     <y>463</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>787</x>
+     <y>538</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <buttongroups>
   <buttongroup name="teacherRadioGroup"/>
  </buttongroups>
