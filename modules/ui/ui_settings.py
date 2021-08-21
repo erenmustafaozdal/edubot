@@ -1,4 +1,5 @@
-class Settings:
+class UISettings:
+
     # UYGULAMA AYARLARI
     # ///////////////////////////////////////////////////////////////
     MENU_WIDTH = 240
@@ -15,3 +16,7 @@ class Settings:
     border-left: 22px solid qlineargradient(spread:pad, x1:0.034, y1:0, x2:0.216, y2:0, stop:0.499 rgba(63,114,175, 255), stop:0.5 rgba(249,106,118, 0));
     background-color: #282c34;
     """
+
+    # İKONLAR
+    FULLSCREEN_ICON = u":/icons/images/icons/fullscreen.svg"
+    FULLSCREEN_EXIT_ICON = u":/icons/images/icons/fullscreen-exit.svg"

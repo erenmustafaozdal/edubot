@@ -216,21 +216,21 @@ class Ui_MainWindow(object):
 "}\n"
 "\n"
 "/* Add Teacher Button */\n"
-"#btnAddTeacher {\n"
+"#btn_add_teacher {\n"
 "    border: 2px solid #112D4E;\n"
 "    border-radius: 5px; \n"
 "    background-color: #3F72AF;\n"
 "	padding: 3px;\n"
 "	margin: 5px 15px 20px 15px;\n"
 "}\n"
-"#btnAddTeacher:hover {\n"
+"#btn_add_teacher:hover {\n"
 "    background-color: #6F99CB;\n"
 "    border: 2px solid #3F72AF;\n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////////////////////////////////////////////////////////////\n"
-""
-                        "Content App */\n"
+"/* /////////////////////////////////////////////////////////////////////////////////////////////////"
+                        "\n"
+"Content App */\n"
 "#contentTopBg{  \n"
 "    background-color: #21252B;\n"
 "}\n"
@@ -255,8 +255,8 @@ class Ui_MainWindow(object):
 "#frame_size_grip {\n"
 "    background-image: url(:/icons/images/icons/cil-size-grip.png);\n"
 "    background-position: right bottom;\n"
-"    backg"
-                        "round-repeat: no-repeat;\n"
+"    "
+                        "background-repeat: no-repeat;\n"
 "}\n"
 "\n"
 "/* CONTENT SETTINGS */\n"
@@ -291,8 +291,8 @@ class Ui_MainWindow(object):
 "    border-color: #2C313C;\n"
 "    padding-left: 5px;\n"
 "    padding-right: 5px;\n"
-"    gridline-color: #2C3"
-                        "13C;\n"
+"    gridline-color:"
+                        " #2C313C;\n"
 "}\n"
 "QTableWidget::item:selected{\n"
 "    background-color: #3F72AF; /* Mavi */\n"
@@ -329,8 +329,8 @@ class Ui_MainWindow(object):
 "    border: 2px solid #21252B;\n"
 "    padding-left: 10px;\n"
 "    selection-color: #FFFFFF;\n"
-"    sel"
-                        "ection-background-color: #6F99CB;\n"
+"  "
+                        "  selection-background-color: #6F99CB;\n"
 "}\n"
 "QLineEdit:hover {\n"
 "    border: 2px solid #404758;\n"
@@ -367,8 +367,8 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    background: #343B48;\n"
 "    height: 8px;\n"
-"    margin: 0px 21px 0 21px"
-                        ";\n"
+"    margin: 0px 21px 0"
+                        " 21px;\n"
 "    border-radius: 0px;\n"
 "}\n"
 "QScrollBar::handle:horizontal {\n"
@@ -406,8 +406,8 @@ class Ui_MainWindow(object):
 "    border: none;\n"
 "    background: #343B48;\n"
 "    width: 8px;\n"
-"    ma"
-                        "rgin: 21px 0 21px 0;\n"
+" "
+                        "   margin: 21px 0 21px 0;\n"
 "    border-radius: 0px;\n"
 " }\n"
 " QScrollBar::handle:vertical {  \n"
@@ -441,8 +441,8 @@ class Ui_MainWindow(object):
 "     background: none;\n"
 " }\n"
 "\n"
-"/* ///////////////////////////////////////////////////////////////////////"
-                        "//////////////////////////\n"
+"/* //////////////////////////////////////////////////////////////////"
+                        "///////////////////////////////\n"
 "CheckBox */\n"
 "QCheckBox::indicator {\n"
 "    border: 3px solid #343B48;\n"
@@ -477,8 +477,8 @@ class Ui_MainWindow(object):
 "    border: 3px solid #343B48;  \n"
 "}\n"
 "\n"
-"/* /////////////////////////////////////////"
-                        "////////////////////////////////////////////////////////\n"
+"/* ////////////////////////////////////"
+                        "/////////////////////////////////////////////////////////////\n"
 "ComboBox */\n"
 "QComboBox{\n"
 "    background-color: #1B1D23;\n"
@@ -510,8 +510,8 @@ class Ui_MainWindow(object):
 "    selection-background-color: #272C36;\n"
 "}\n"
 "\n"
-"/* ///////////////////////////////////////////////////////////"
-                        "//////////////////////////////////////\n"
+"/* //////////////////////////////////////////////////////"
+                        "///////////////////////////////////////////\n"
 "Sliders */\n"
 "QSlider::groove:horizontal {\n"
 "    border-radius: 5px;\n"
@@ -549,8 +549,8 @@ class Ui_MainWindow(object):
 "QSlider::handle:vertical {\n"
 "    background-color: #3F72AF; /* Mavi */\n"
 "    border: none;\n"
-"    height: 10p"
-                        "x;\n"
+"    height"
+                        ": 10px;\n"
 "    width: 10px;\n"
 "    margin: 0px;\n"
 "    border-radius: 5px;\n"
@@ -584,8 +584,8 @@ class Ui_MainWindow(object):
 "QGroupBox {\n"
 "    border: 1px solid #5B657C;\n"
 "    border-radius: 9px;\n"
-"    m"
-                        "argin-top: 10px;\n"
+""
+                        "    margin-top: 10px;\n"
 "    margin-bottom: 20px;\n"
 "	font-size: 13px;\n"
 "    font-weight: bold;\n"
@@ -920,14 +920,14 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_12.addWidget(self.extraCenter)
 
-        self.btnAddTeacher = QPushButton(self.extraContent)
-        self.btnAddTeacher.setObjectName(u"btnAddTeacher")
-        self.btnAddTeacher.setCursor(QCursor(Qt.PointingHandCursor))
+        self.btn_add_teacher = QPushButton(self.extraContent)
+        self.btn_add_teacher.setObjectName(u"btn_add_teacher")
+        self.btn_add_teacher.setCursor(QCursor(Qt.PointingHandCursor))
         icon1 = QIcon()
         icon1.addFile(u":/icons/images/icons/person-plus-fill.svg", QSize(), QIcon.Normal, QIcon.Off)
-        self.btnAddTeacher.setIcon(icon1)
+        self.btn_add_teacher.setIcon(icon1)
 
-        self.verticalLayout_12.addWidget(self.btnAddTeacher)
+        self.verticalLayout_12.addWidget(self.btn_add_teacher)
 
 
         self.extraColumLayout.addWidget(self.extraContent)
@@ -1091,7 +1091,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignTop)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 859, 641))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 290, 727))
         self.verticalLayout_7 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_7.setSpacing(0)
         self.verticalLayout_7.setObjectName(u"verticalLayout_7")
@@ -1354,8 +1354,8 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.teacherSelect2, self.teacherName1)
         QWidget.setTabOrder(self.teacherName1, self.teacherSelect1)
         QWidget.setTabOrder(self.teacherSelect1, self.textEdit)
-        QWidget.setTabOrder(self.textEdit, self.btnAddTeacher)
-        QWidget.setTabOrder(self.btnAddTeacher, self.settingsTopBtn)
+        QWidget.setTabOrder(self.textEdit, self.btn_add_teacher)
+        QWidget.setTabOrder(self.btn_add_teacher, self.settingsTopBtn)
         QWidget.setTabOrder(self.settingsTopBtn, self.minimizeAppBtn)
         QWidget.setTabOrder(self.minimizeAppBtn, self.maximizeRestoreAppBtn)
         QWidget.setTabOrder(self.maximizeRestoreAppBtn, self.closeAppBtn)
@@ -1371,7 +1371,7 @@ class Ui_MainWindow(object):
         self.rad_eokul_login_edevlet.toggled.connect(self.ledit_mebbis_username.setDisabled)
         self.rad_eokul_login_edevlet.toggled.connect(self.ledit_mebbis_password.setDisabled)
 
-        self.stackedWidget.setCurrentIndex(1)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1412,7 +1412,7 @@ class Ui_MainWindow(object):
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-i"
                         "ndent:0; text-indent:0px;\"><img src=\":/images/images/images/robot_not_found.png\" /></p>\n"
 "<p align=\"center\" style=\" margin-top:12px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">Hemen a\u015fa\u011f\u0131daki <span style=\" font-weight:600; font-style:italic;\">&quot;\u00d6\u011fretmen Ekle&quot;</span> tu\u015fu ile ba\u015flayabilirsiniz.</p></body></html>", None))
-        self.btnAddTeacher.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmen Ekle", None))
+        self.btn_add_teacher.setText(QCoreApplication.translate("MainWindow", u"\u00d6\u011fretmen Ekle", None))
         self.titleRightInfo.setText(QCoreApplication.translate("MainWindow", u"EduBot'a ho\u015f geldiniz!..", None))
 #if QT_CONFIG(tooltip)
         self.settingsTopBtn.setToolTip(QCoreApplication.translate("MainWindow", u"Ayarlar", None))

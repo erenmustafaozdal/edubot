@@ -307,14 +307,14 @@ Extra Tab */
 }
 
 /* Add Teacher Button */
-#btnAddTeacher {
+#btn_add_teacher {
     border: 2px solid #112D4E;
     border-radius: 5px; 
     background-color: #3F72AF;
 	padding: 3px;
 	margin: 5px 15px 20px 15px;
 }
-#btnAddTeacher:hover {
+#btn_add_teacher:hover {
     background-color: #6F99CB;
     border: 2px solid #3F72AF;
 }
@@ -1511,7 +1511,7 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="btnAddTeacher">
+              <widget class="QPushButton" name="btn_add_teacher">
                <property name="cursor">
                 <cursorShape>PointingHandCursor</cursorShape>
                </property>
@@ -1893,7 +1893,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>1</number>
+                      <number>0</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="sizePolicy">
@@ -1950,8 +1950,8 @@ background-repeat: no-repeat;</string>
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>859</width>
-                            <height>641</height>
+                            <width>290</width>
+                            <height>727</height>
                            </rect>
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2414,7 +2414,7 @@ background-repeat: no-repeat;</string>
   <tabstop>teacherName1</tabstop>
   <tabstop>teacherSelect1</tabstop>
   <tabstop>textEdit</tabstop>
-  <tabstop>btnAddTeacher</tabstop>
+  <tabstop>btn_add_teacher</tabstop>
   <tabstop>settingsTopBtn</tabstop>
   <tabstop>minimizeAppBtn</tabstop>
   <tabstop>maximizeRestoreAppBtn</tabstop>
