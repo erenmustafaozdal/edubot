@@ -2,6 +2,10 @@
 # //////////////////////////////////////////////////////////////////////////////
 import sqlite3
 
+# YEREL ARAYÜZ MODÜLLERİ VE ARAÇLARI İÇERİ AKTARILIR
+# //////////////////////////////////////////////////////////////////////////////
+from modules.db.migration import Migration
+
 
 class Core:
     """todo: DBCore sınıfı için dokümantasyon eklenecek"""
@@ -13,4 +17,8 @@ class Core:
 
         self.conn = sqlite3.connect(self.DB_PATH)
         self.cur = self.conn.cursor()
+
+        # MIGRATION İŞLEMLERİ
+        # //////////////////////////////////////////////////////////////////////
+        Migration(self.conn, self.cur).run()
 
