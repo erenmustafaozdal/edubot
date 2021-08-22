@@ -20,9 +20,16 @@ from PySide6.QtWidgets import QApplication
 # YEREL ARAYÜZ MODÜLLERİ VE ARAÇLARI İÇERİ AKTARILIR
 # //////////////////////////////////////////////////////////////////////////////
 from modules.ui.ui_window_main import UIWindowMain
+from modules.db.core import Core as DBCore
 os.environ["QT_FONT_DPI"] = "96" # Yüksek DPI ve %100'ün üzerinde ölçek için sorun düzeltme
 
 if __name__ == "__main__":
+    # VERİ TABANI ÇALIŞTIRILIR
+    # //////////////////////////////////////////////////////////////////////////////
+    db = DBCore()
+
+    # EDUBOT ÇALIŞTIRILIR
+    # //////////////////////////////////////////////////////////////////////////////
     edubot = QApplication(sys.argv)
     edubot.setWindowIcon(QIcon("icon.ico"))
     window = UIWindowMain()
