@@ -3,3 +3,6 @@ __pycache__/
 
 # PyCharm IDE klasörünü gizle
 .idea/
+
+# edubot.db veri tabanını gizle
+data/edubot.db
