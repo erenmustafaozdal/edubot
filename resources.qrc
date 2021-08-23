@@ -5,6 +5,9 @@
     <file>images/images/robot_not_found.png</file>
   </qresource>
   <qresource prefix="icons">
+    <file>images/icons/caret-down-fill.svg</file>
+    <file>images/icons/save-fill.svg</file>
+    <file>images/icons/exclamation-circle-fill-red.svg</file>
     <file>images/icons/cil-size-grip.png</file>
     <file>images/icons/dash.svg</file>
     <file>images/icons/fullscreen.svg</file>

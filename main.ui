@@ -429,7 +429,7 @@ QLineEdit:focus {
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
 PlainTextEdit */
 QPlainTextEdit {
-    background-color: #1B1D23;
+    background-color: #21252B;
     border-radius: 5px;
     padding: 10px;
     selection-color: #FFFFFF;
@@ -582,7 +582,7 @@ QComboBox::drop-down {
     border-left-style: solid;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;    
-    background-image: url(:/icons/images/icons/cil-arrow-bottom.png);
+    background-image: url(:/icons/images/icons/caret-down-fill.svg);
     background-position: center;
     background-repeat: no-reperat;
  }
@@ -661,11 +661,27 @@ QCommandLinkButton:pressed {
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////
+Button */
+#pagesContainer QPushButton {
+	border: 2px solid#343B48;
+	border-radius: 5px;	
+	background-color: #343B48;
+}
+#pagesContainer QPushButton:hover {
+	background-color:#394150;
+	border: 2px solid #3D4656;
+}
+#pagesContainer QPushButton:pressed {	
+	background-color: #232831;
+	border: 2px solid#2B323D;
+}
+
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
 QGroupBox */
 QGroupBox {
     border: 1px solid #5B657C;
     border-radius: 9px;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 20px;
 	font-size: 13px;
     font-weight: bold;
@@ -674,6 +690,7 @@ QGroupBox {
 }
 
 QGroupBox::title {
+    margin-top: 10px;
     subcontrol-origin: margin;
     left: 10px;
     padding: 0 3px 0 3px;
@@ -694,7 +711,7 @@ QLabel[class=&quot;page_title&quot;] {
 
 /* Page Description */
 QLabel[class=&quot;page_description&quot;] {
-	margin: 0 0 5px 0;
+	margin: 0 0 10px 0;
 }
 
 /* Form Description */
@@ -708,6 +725,17 @@ QLabel[class=&quot;field_description&quot;] {
 	margin: 0 0 5px 0;
 	color: #717E95;
 	font-size: 11px;
+}
+
+/* Error Box */
+QLabel[class=&quot;error_box&quot;] {
+	color: #842029;
+	padding: 10px 10px;
+	margin: 5px 0 10px;
+	border: 3px solid #f5c2c7;
+	border-radius: 5px;
+    border-left: 5px solid #f8d7da;
+	padding-left: 40px;
 }</string>
    </property>
    <layout class="QVBoxLayout" name="appMargins">
@@ -1893,7 +1921,7 @@ p, li { white-space: pre-wrap; }
                       <string notr="true">background: transparent;</string>
                      </property>
                      <property name="currentIndex">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <widget class="QWidget" name="home">
                       <property name="sizePolicy">
@@ -1950,8 +1978,8 @@ background-repeat: no-repeat;</string>
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>290</width>
-                            <height>727</height>
+                            <width>859</width>
+                            <height>946</height>
                            </rect>
                           </property>
                           <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -1992,7 +2020,7 @@ background-repeat: no-repeat;</string>
                                <number>0</number>
                               </property>
                               <property name="bottomMargin">
-                               <number>0</number>
+                               <number>25</number>
                               </property>
                               <item>
                                <widget class="QLabel" name="teacher_title">
@@ -2001,6 +2029,9 @@ background-repeat: no-repeat;</string>
                                   <horstretch>0</horstretch>
                                   <verstretch>0</verstretch>
                                  </sizepolicy>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">margin-bottom: 15px;</string>
                                 </property>
                                 <property name="text">
                                  <string>&lt;h2&gt;Yeni Öğretmen Ekleyin&lt;/h2&gt;</string>
@@ -2021,6 +2052,9 @@ background-repeat: no-repeat;</string>
                                   <verstretch>0</verstretch>
                                  </sizepolicy>
                                 </property>
+                                <property name="styleSheet">
+                                 <string notr="true">margin-bottom: 10px;</string>
+                                </property>
                                 <property name="text">
                                  <string>EduBot'u kullanacak öğretmen ekleyin.</string>
                                 </property>
@@ -2029,6 +2063,45 @@ background-repeat: no-repeat;</string>
                                 </property>
                                 <property name="class" stdset="0">
                                  <string>page_description</string>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="Line" name="line_3">
+                                <property name="styleSheet">
+                                 <string notr="true">color: #5B657C;</string>
+                                </property>
+                                <property name="frameShadow">
+                                 <enum>QFrame::Plain</enum>
+                                </property>
+                                <property name="orientation">
+                                 <enum>Qt::Horizontal</enum>
+                                </property>
+                               </widget>
+                              </item>
+                              <item>
+                               <widget class="QLabel" name="teacher_error_box">
+                                <property name="styleSheet">
+                                 <string notr="true">color: #842029;
+padding: 10px 10px;
+margin: 5px 0 10px;
+border: 3px solid #f5c2c7;
+border-radius: 5px;
+border-left: 5px solid #f8d7da;
+padding-left: 40px;
+background-color: #f8d7da;
+background-position: left center;
+background-repeat: no-repeat;
+background-image: url(:/icons/images/icons/exclamation-circle-fill-red.svg);</string>
+                                </property>
+                                <property name="text">
+                                 <string>Text Label</string>
+                                </property>
+                                <property name="wordWrap">
+                                 <bool>true</bool>
+                                </property>
+                                <property name="class" stdset="0">
+                                 <string>error_box</string>
                                 </property>
                                </widget>
                               </item>
@@ -2061,6 +2134,9 @@ background-repeat: no-repeat;</string>
                                  </property>
                                  <item>
                                   <widget class="QLabel" name="label">
+                                   <property name="styleSheet">
+                                    <string notr="true">color: #717E95;</string>
+                                   </property>
                                    <property name="text">
                                     <string>EduBot üzerinde görünecek olan öğretmen bilgileri. Bu bilgileri sadece EduBot içinde öğretmen seçimi yapmak için kullanacaksınız.</string>
                                    </property>
@@ -2074,6 +2150,9 @@ background-repeat: no-repeat;</string>
                                  </item>
                                  <item>
                                   <widget class="Line" name="line">
+                                   <property name="styleSheet">
+                                    <string notr="true">color: #5B657C;</string>
+                                   </property>
                                    <property name="frameShadow">
                                     <enum>QFrame::Plain</enum>
                                    </property>
@@ -2088,24 +2167,58 @@ background-repeat: no-repeat;</string>
                                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
                                    </property>
                                    <item row="0" column="0">
-                                    <widget class="QLabel" name="lbl_name">
+                                    <widget class="QLabel" name="lbl_first_name">
                                      <property name="text">
                                       <string>Ad</string>
                                      </property>
                                     </widget>
                                    </item>
                                    <item row="0" column="1">
-                                    <widget class="QLineEdit" name="ledit_name"/>
+                                    <widget class="QLineEdit" name="ledit_first_name">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                    </widget>
                                    </item>
                                    <item row="1" column="0">
-                                    <widget class="QLabel" name="lbl_surname">
+                                    <widget class="QLabel" name="lbl__last_name">
                                      <property name="text">
                                       <string>Soyad</string>
                                      </property>
                                     </widget>
                                    </item>
                                    <item row="1" column="1">
-                                    <widget class="QLineEdit" name="ledit_surname"/>
+                                    <widget class="QLineEdit" name="ledit_last_name">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="2" column="0">
+                                    <widget class="QLabel" name="lbl_branch">
+                                     <property name="text">
+                                      <string>Branş</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="2" column="1">
+                                    <widget class="QComboBox" name="combo_branch">
+                                     <item>
+                                      <property name="text">
+                                       <string/>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Okul öncesi öğretmeni</string>
+                                      </property>
+                                     </item>
+                                     <item>
+                                      <property name="text">
+                                       <string>Sınıf öğretmeni</string>
+                                      </property>
+                                     </item>
+                                    </widget>
                                    </item>
                                   </layout>
                                  </item>
@@ -2147,6 +2260,9 @@ background-repeat: no-repeat;</string>
                                      <verstretch>0</verstretch>
                                     </sizepolicy>
                                    </property>
+                                   <property name="styleSheet">
+                                    <string notr="true">color: #717E95;</string>
+                                   </property>
                                    <property name="lineWidth">
                                     <number>1</number>
                                    </property>
@@ -2163,6 +2279,9 @@ background-repeat: no-repeat;</string>
                                  </item>
                                  <item>
                                   <widget class="Line" name="line_2">
+                                   <property name="styleSheet">
+                                    <string notr="true">color: #5B657C;</string>
+                                   </property>
                                    <property name="frameShadow">
                                     <enum>QFrame::Plain</enum>
                                    </property>
@@ -2197,6 +2316,74 @@ background-repeat: no-repeat;</string>
                                      </property>
                                     </widget>
                                    </item>
+                                   <item row="5" column="0">
+                                    <widget class="QLabel" name="lbl_mebbis_username">
+                                     <property name="text">
+                                      <string>Mebbis Kullanıcı Adı</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="5" column="1">
+                                    <widget class="QLineEdit" name="ledit_mebbis_username">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                     <property name="inputMask">
+                                      <string>99999999999</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="7" column="0">
+                                    <widget class="QLabel" name="lbl_mebbis_password">
+                                     <property name="text">
+                                      <string>Mebbis Şifresi</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="7" column="1">
+                                    <widget class="QLineEdit" name="ledit_mebbis_password">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                     <property name="echoMode">
+                                      <enum>QLineEdit::Password</enum>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="9" column="0">
+                                    <widget class="QLabel" name="lbl_edevlet_tc">
+                                     <property name="text">
+                                      <string>e-Devlet T.C. Kimlik No</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="9" column="1">
+                                    <widget class="QLineEdit" name="ledit_edevlet_tc">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                     <property name="inputMask">
+                                      <string>99999999999</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="11" column="0">
+                                    <widget class="QLabel" name="lbl_edevlet_password">
+                                     <property name="text">
+                                      <string>e-Devlet Şifresi</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="11" column="1">
+                                    <widget class="QLineEdit" name="ledit_edevlet_password">
+                                     <property name="styleSheet">
+                                      <string notr="true">background-color: #21252B;</string>
+                                     </property>
+                                     <property name="echoMode">
+                                      <enum>QLineEdit::Password</enum>
+                                     </property>
+                                    </widget>
+                                   </item>
                                    <item row="4" column="1">
                                     <widget class="QLabel" name="label_3">
                                      <property name="sizePolicy">
@@ -2204,6 +2391,9 @@ background-repeat: no-repeat;</string>
                                        <horstretch>0</horstretch>
                                        <verstretch>0</verstretch>
                                       </sizepolicy>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: #717E95; font-size: 11px;</string>
                                      </property>
                                      <property name="lineWidth">
                                       <number>1</number>
@@ -2219,71 +2409,103 @@ background-repeat: no-repeat;</string>
                                      </property>
                                     </widget>
                                    </item>
-                                   <item row="5" column="0">
-                                    <widget class="QLabel" name="lbl_mebbis_username">
+                                   <item row="6" column="1">
+                                    <widget class="QLabel" name="label_4">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: #717E95; font-size: 11px;</string>
+                                     </property>
+                                     <property name="lineWidth">
+                                      <number>1</number>
+                                     </property>
                                      <property name="text">
-                                      <string>Mebbis Kullanıcı Adı</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item row="5" column="1">
-                                    <widget class="QLineEdit" name="ledit_mebbis_username">
-                                     <property name="inputMask">
-                                      <string>99999999999</string>
-                                     </property>
-                                     <property name="placeholderText">
                                       <string>Mebbis kullanıcı adı olarak kullandığınız T.C. Kimlik No</string>
                                      </property>
-                                    </widget>
-                                   </item>
-                                   <item row="6" column="0">
-                                    <widget class="QLabel" name="lbl_mebbis_password">
-                                     <property name="text">
-                                      <string>Mebbis Şifresi</string>
+                                     <property name="wordWrap">
+                                      <bool>true</bool>
                                      </property>
-                                    </widget>
-                                   </item>
-                                   <item row="6" column="1">
-                                    <widget class="QLineEdit" name="ledit_mebbis_password">
-                                     <property name="echoMode">
-                                      <enum>QLineEdit::Password</enum>
-                                     </property>
-                                     <property name="placeholderText">
-                                      <string>Mebbis kullanıcı adınıza tanımladığınız şifreniz</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item row="7" column="0">
-                                    <widget class="QLabel" name="lbl_edevlet_tc">
-                                     <property name="text">
-                                      <string>e-Devlet T.C. Kimlik No</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item row="7" column="1">
-                                    <widget class="QLineEdit" name="ledit_edevlet_tc">
-                                     <property name="inputMask">
-                                      <string>99999999999</string>
-                                     </property>
-                                     <property name="placeholderText">
-                                      <string>11 haneli e-Devlet T.C. Kimlik No</string>
-                                     </property>
-                                    </widget>
-                                   </item>
-                                   <item row="8" column="0">
-                                    <widget class="QLabel" name="lbl_edevlet_password">
-                                     <property name="text">
-                                      <string>e-Devlet Şifresi</string>
+                                     <property name="class" stdset="0">
+                                      <string>field_description</string>
                                      </property>
                                     </widget>
                                    </item>
                                    <item row="8" column="1">
-                                    <widget class="QLineEdit" name="ledit_edevlet_password">
-                                     <property name="echoMode">
-                                      <enum>QLineEdit::Password</enum>
+                                    <widget class="QLabel" name="label_5">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
                                      </property>
-                                     <property name="placeholderText">
+                                     <property name="styleSheet">
+                                      <string notr="true">color: #717E95; font-size: 11px;</string>
+                                     </property>
+                                     <property name="lineWidth">
+                                      <number>1</number>
+                                     </property>
+                                     <property name="text">
+                                      <string>Mebbis kullanıcı adınıza tanımladığınız şifreniz</string>
+                                     </property>
+                                     <property name="wordWrap">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="class" stdset="0">
+                                      <string>field_description</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="10" column="1">
+                                    <widget class="QLabel" name="label_6">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: #717E95; font-size: 11px;</string>
+                                     </property>
+                                     <property name="lineWidth">
+                                      <number>1</number>
+                                     </property>
+                                     <property name="text">
+                                      <string>11 haneli e-Devlet T.C. Kimlik No</string>
+                                     </property>
+                                     <property name="wordWrap">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="class" stdset="0">
+                                      <string>field_description</string>
+                                     </property>
+                                    </widget>
+                                   </item>
+                                   <item row="12" column="1">
+                                    <widget class="QLabel" name="label_7">
+                                     <property name="sizePolicy">
+                                      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                       <horstretch>0</horstretch>
+                                       <verstretch>0</verstretch>
+                                      </sizepolicy>
+                                     </property>
+                                     <property name="styleSheet">
+                                      <string notr="true">color: #717E95; font-size: 11px;</string>
+                                     </property>
+                                     <property name="lineWidth">
+                                      <number>1</number>
+                                     </property>
+                                     <property name="text">
                                       <string>e-Devlet için tanımladığınız şifreniz</string>
+                                     </property>
+                                     <property name="wordWrap">
+                                      <bool>true</bool>
+                                     </property>
+                                     <property name="class" stdset="0">
+                                      <string>field_description</string>
                                      </property>
                                     </widget>
                                    </item>
@@ -2291,6 +2513,55 @@ background-repeat: no-repeat;</string>
                                  </item>
                                 </layout>
                                </widget>
+                              </item>
+                              <item>
+                               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                                <property name="leftMargin">
+                                 <number>0</number>
+                                </property>
+                                <property name="topMargin">
+                                 <number>10</number>
+                                </property>
+                                <property name="bottomMargin">
+                                 <number>10</number>
+                                </property>
+                                <item>
+                                 <spacer name="horizontalSpacer">
+                                  <property name="orientation">
+                                   <enum>Qt::Horizontal</enum>
+                                  </property>
+                                  <property name="sizeHint" stdset="0">
+                                   <size>
+                                    <width>40</width>
+                                    <height>20</height>
+                                   </size>
+                                  </property>
+                                 </spacer>
+                                </item>
+                                <item>
+                                 <widget class="QPushButton" name="teacher_save_btn">
+                                  <property name="minimumSize">
+                                   <size>
+                                    <width>150</width>
+                                    <height>30</height>
+                                   </size>
+                                  </property>
+                                  <property name="cursor">
+                                   <cursorShape>PointingHandCursor</cursorShape>
+                                  </property>
+                                  <property name="styleSheet">
+                                   <string notr="true">background-color: #343B48;</string>
+                                  </property>
+                                  <property name="text">
+                                   <string> Kaydet</string>
+                                  </property>
+                                  <property name="icon">
+                                   <iconset resource="resources.qrc">
+                                    <normaloff>:/icons/images/icons/save-fill.svg</normaloff>:/icons/images/icons/save-fill.svg</iconset>
+                                  </property>
+                                 </widget>
+                                </item>
+                               </layout>
                               </item>
                              </layout>
                             </widget>
@@ -2420,8 +2691,8 @@ background-repeat: no-repeat;</string>
   <tabstop>maximizeRestoreAppBtn</tabstop>
   <tabstop>closeAppBtn</tabstop>
   <tabstop>scrollArea</tabstop>
-  <tabstop>ledit_name</tabstop>
-  <tabstop>ledit_surname</tabstop>
+  <tabstop>ledit_first_name</tabstop>
+  <tabstop>ledit_last_name</tabstop>
   <tabstop>rad_eokul_login_mebbis</tabstop>
   <tabstop>rad_eokul_login_edevlet</tabstop>
   <tabstop>ledit_mebbis_username</tabstop>
