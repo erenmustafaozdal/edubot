@@ -27,13 +27,14 @@ class UICore(QMainWindow):
         """UICore sınıfı yapıcı metodu"""
         super(UICore, self).__init__()
 
+        self.settings = UISettings  # uygulama ayarları
+        self.trans = UITranslation  # uygulama metinleri
+
     def setup_core(self):
         # EVRENSEL ARAÇLAR VE DEĞİŞKENLER AYARLANIR
         # //////////////////////////////////////////////////////////////////////
         self.ui = Ui_MainWindow()  # nesneler
         self.ui.setupUi(self)
-        self.settings = UISettings  # uygulama ayarları
-        self.trans = UITranslation  # uygulama metinleri
 
         # METİNLERİ EKLE
         self.setWindowTitle(self.trans.app_title)
@@ -209,3 +210,16 @@ class UICore(QMainWindow):
             self.ui.toggleTeachersBox.setStyleSheet(style.replace(color, ''))
 
         self.box_animation(self.ui.teachersBox, width, width_extended)
+
+    # KUTUCUĞU RESETLEME İŞLEMİ YAPAR
+    # ///////////////////////////////////////////////////////////////////
+    def reset_error_box(self, box):
+        box.clear()
+        box.setVisible(False)
+
+    # KUTUCUĞU GÖSTERİR
+    # ///////////////////////////////////////////////////////////////////
+    def flash_error_box(self, box, message):
+        box.clear()
+        box.setText(message)
+        box.setVisible(True)

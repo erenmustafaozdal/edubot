@@ -4,15 +4,18 @@ from PySide6.QtCore import Qt
 
 # YEREL MODÜLLERİ VE ARAÇLARI İÇERİ AKTAR
 # //////////////////////////////////////////////////////////////////////////////
+from modules.db.core import Core as DBCore
 from modules.ui.ui_core import UICore
 from modules.teacher.ui_teacher import UITeacher
 
 
 class UIWindowMain(UICore):
 
-    def __init__(self):
+    def __init__(self, db: DBCore):
         """UIWindowMain sınıfı yapıcı metodu"""
         super(UIWindowMain, self).__init__()
+
+        self.db = db
 
         # ÇEKİRDEK SINIFI YÜKLEME İŞLEMİ YAPILIR
         # //////////////////////////////////////////////////////////////////////

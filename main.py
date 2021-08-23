@@ -32,5 +32,5 @@ if __name__ == "__main__":
     # //////////////////////////////////////////////////////////////////////////////
     edubot = QApplication(sys.argv)
     edubot.setWindowIcon(QIcon("icon.ico"))
-    window = UIWindowMain()
+    window = UIWindowMain(db)
     sys.exit(edubot.exec())

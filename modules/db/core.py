@@ -15,7 +15,7 @@ class Core:
     def __init__(self):
         """DBCore sınıfı yapıcı metodu"""
 
-        self.conn = sqlite3.connect(self.DB_PATH)
+        self.conn = sqlite3.connect(self.DB_PATH, detect_types=sqlite3.PARSE_DECLTYPES)
         self.cur = self.conn.cursor()
 
         # MIGRATION İŞLEMLERİ
