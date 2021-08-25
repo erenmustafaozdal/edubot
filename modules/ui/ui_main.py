@@ -18,7 +18,7 @@ class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
-        MainWindow.resize(1149, 720)
+        MainWindow.resize(1149, 867)
         MainWindow.setMinimumSize(QSize(940, 560))
         self.styleSheet = QWidget(MainWindow)
         self.styleSheet.setObjectName(u"styleSheet")
@@ -1503,10 +1503,14 @@ class Ui_MainWindow(object):
         QWidget.setTabOrder(self.closeAppBtn, self.scrollArea)
         QWidget.setTabOrder(self.scrollArea, self.ledit_first_name)
         QWidget.setTabOrder(self.ledit_first_name, self.ledit_last_name)
-        QWidget.setTabOrder(self.ledit_last_name, self.rad_eokul_login_mebbis)
+        QWidget.setTabOrder(self.ledit_last_name, self.combo_branch)
+        QWidget.setTabOrder(self.combo_branch, self.rad_eokul_login_mebbis)
         QWidget.setTabOrder(self.rad_eokul_login_mebbis, self.rad_eokul_login_edevlet)
         QWidget.setTabOrder(self.rad_eokul_login_edevlet, self.ledit_mebbis_username)
         QWidget.setTabOrder(self.ledit_mebbis_username, self.ledit_mebbis_password)
+        QWidget.setTabOrder(self.ledit_mebbis_password, self.ledit_edevlet_tc)
+        QWidget.setTabOrder(self.ledit_edevlet_tc, self.ledit_edevlet_password)
+        QWidget.setTabOrder(self.ledit_edevlet_password, self.teacher_save_btn)
 
         self.retranslateUi(MainWindow)
         self.rad_eokul_login_edevlet.toggled.connect(self.ledit_mebbis_username.setDisabled)

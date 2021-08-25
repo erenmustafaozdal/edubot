@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>1149</width>
-    <height>720</height>
+    <height>867</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -2693,10 +2693,14 @@ background-image: url(:/icons/images/icons/exclamation-circle-fill-red.svg);</st
   <tabstop>scrollArea</tabstop>
   <tabstop>ledit_first_name</tabstop>
   <tabstop>ledit_last_name</tabstop>
+  <tabstop>combo_branch</tabstop>
   <tabstop>rad_eokul_login_mebbis</tabstop>
   <tabstop>rad_eokul_login_edevlet</tabstop>
   <tabstop>ledit_mebbis_username</tabstop>
   <tabstop>ledit_mebbis_password</tabstop>
+  <tabstop>ledit_edevlet_tc</tabstop>
+  <tabstop>ledit_edevlet_password</tabstop>
+  <tabstop>teacher_save_btn</tabstop>
  </tabstops>
  <resources>
   <include location="resources.qrc"/>
